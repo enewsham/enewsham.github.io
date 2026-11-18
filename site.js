@@ -28,18 +28,19 @@ function cover(p, cls = "", src = p.cover, label = "Add a cover image") {
     : `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="${shapePath(p.lobes, .08, 40, p.lobes * .1)}"/></svg><span class="ph">${label}</span>`}</div>`;
 }
 
-/* ===== External links and PDFs (résumé) open in a new tab =====
-   Covers links written in the HTML and ones added later by scripts. */
-function openExternalInNewTab(scope = document) {
+/* ===== Every link that goes to another page opens in a new tab =====
+   Includes other sites, the résumé, and your own project pages.
+   Stays in the same tab: jumps within the current page (#work, #about, "On this page")
+   and email/phone links. Add data-same-tab to any link to keep it in the same tab. */
+function openLinksInNewTab(scope = document) {
   scope.querySelectorAll("a[href]").forEach(a => {
     const href = a.getAttribute("href");
-    if (/^(mailto:|tel:|#)/.test(href)) return;
+    if (/^(mailto:|tel:|#)/.test(href) || a.hasAttribute("data-same-tab")) return;
     const url = new URL(href, location.href);
-    const external = /^https?:$/.test(url.protocol) && url.origin !== location.origin;
-    if (external || /\.pdf$/i.test(url.pathname)) {
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-    }
+    const samePage = url.origin === location.origin && url.pathname === location.pathname && url.search === location.search;
+    if (samePage) return;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
   });
 }
 
@@ -107,5 +108,5 @@ function initStrip(wrap) {
 function initChrome() {
   const bar = document.querySelector(".top");
   addEventListener("scroll", () => bar.classList.toggle("scrolled", scrollY > 8), { passive: true });
-  openExternalInNewTab();
+  openLinksInNewTab();
 }
