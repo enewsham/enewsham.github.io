@@ -135,4 +135,4 @@ const PROJECTS = [
     tools: ["Arduino", "Arduino IDE", "GPS module"], links: [] }
 ];
 
-const FILTERS = ["All", "Games", "Unity", "VR", "Narrative", "Physical", "UX"];
+const FILTERS = ["All", "Unity", "VR", "Narrative", "Physical", "UX"];
