@@ -92,21 +92,38 @@ const PROJECTS = [
     tools: ["Unity"],
     links: [{ href: "https://sonicdrives.itch.io/paperworks", label: "Play on itch.io" }] },
 
+  { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Fall 2026 Game Jam (Games 4 Social Impact)",
+    cover: "nine-to-five/nineToFiveTitle.png", coverFit: "contain", coverBg: "#47704C",
+    roleShort: "Concept designer, level designer", duration: "48 Hours",
+    tags: ["Level design"], cats: ["Games"], lobes: 7,
+    summary: "Made for the Pitt Games 4 Social Impact Game Jam. As a new Jamazon employee, pack customer orders, load them onto a dolly, and get them to the truck before you miss your daily quota.",
+    overview: "You're a newly hired Jamazon employee working nine to five. Your job is to package items into boxes for customers, stack them on a dolly, and bring them out to the delivery truck, all while keeping up with your daily quota.",
+    challenge: "The jam's theme was \"dolly.\" We built the game's core loop around one: pack the order, load the dolly, and make the delivery.",
+    role: "Concept design and level design.",
+    gallery: [],
+    video: "",
+    team: [["Myself", "Level design"], ["Anish", "Programming"], ["Shannon ", "Programming, art, 3D Modeling"]],
+    tools: ["Unity", "Blender", "Visual Studio Code"],
+    links: [
+      { href: "https://sonicdrives.itch.io/nine-to-five", label: "Play on itch.io" },
+      { href: "https://github.com/Anish-Satish/Amazon-Simulator", label: "GitHub repo" }
+    ] },
+
   { id: "anomaly", title: "Arduino Anomaly Detector", year: "2025", kind: "Team project", context: "DNID final project",
     cover: "arduino-anomaly-device/20251122_160230.jpg",
-    roleShort: "[Your role]", duration: "[Length]",
+    roleShort: "Concept design, storyboarding", duration: "5 Months",
     tags: ["ARG", "Arduino"], cats: ["Physical", "Narrative"], lobes: 8,
     summary: "A handheld Arduino device with a GPS module that drives a physically interactive ARG.",
     overview: "Using an Arduino controller, we assembled a device with a GPS module to build a physically interactive alternate reality game. It was programmed in the Arduino IDE.",
-    challenge: "[How to make a story you discover by moving through real places.]",
-    role: "[Your role: hardware assembly, programming, narrative, and so on.]",
-    highlights: ["[How location triggers story beats]", "[A playtest moment]"],
+    challenge: "Create a narrative of some sort using an Arduino device.",
+    role: "Concept design, storyboarding",
+    highlights: ["Designing the storyboard for the anomoly face graphics displayed on the LED screen", "Designing and mapping out the inital concept designs with group"],
     process: "[Prototyping the hardware and testing the ARG with players.]",
     gallery: [],
     video: "",
     outcome: "[How players reacted.]",
     reflection: "[What working with hardware taught you.]",
-    team: [["[Teammate]", "[Role]"]],
+    team: [["Myself", "Concept design, storyboarding"], ["Chris", "Programming, hardware assembly"]],
     tools: ["Arduino", "Arduino IDE", "GPS module"], links: [] }
 ];
 
