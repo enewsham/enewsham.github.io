@@ -99,7 +99,7 @@ const PROJECTS = [
   { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Game Jam 2026",
     coverText: "Nine\nto Five", coverBg: "##2A3A52", coverInk: "#E3F1EE",
     roleShort: "Level Designer", duration: "48 Hours",
-    tags: ["Level design", "Unity", "3D"], cats: ["Games", "Unity", "3D"], lobes: 7,
+    tags: ["Unity", "3D"], cats: ["Games", "Unity", "3D"], lobes: 7,
     summary: "Created for the Pitt 2026 Game Jam. The player packages items into boxes for customers and brings them to the delivery truck.",
     overview: "The user must deliver at least 30 boxes to the delivery truck within a time limit of three minutes.",
     challenge: "The jam's theme was \"dolly.\" We built the game's core loop around one: pack the order, load the dolly, and make the delivery.",
