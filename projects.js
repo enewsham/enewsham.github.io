@@ -15,7 +15,7 @@
 const PROJECTS = [
   { id: "anemoia", title: "Anemoia", year: "2026", kind: "Team project, 3 people", context: "DNID English Capstone",
     page: "anemoia-design/index.html",   // Anemoia has its own long-form page instead of project.html
-    cover: "anemoia-design/images/coverImage.png", coverPos: "left center",
+    cover: "anemoia-design/images/coverImage.png?v=2", coverPos: "left center",
     roleShort: "Project manager, narrative designer, lead artist", duration: "Spring 2026",
     tags: ["VR", "Narrative design", "Unity"], cats: ["VR", "Narrative", "Games"], lobes: 9,
     summary: "A VR narrative for Meta Quest 2 about a queer student coming home from college and stepping into the objects of a childhood they never felt present in.",

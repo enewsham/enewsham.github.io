@@ -118,7 +118,7 @@ grid.innerHTML = PROJECTS.map(p => `
     <p>${p.summary}</p>
     <ul class="tags">${li(p.tags)}</ul>
   </a>`).join("");
-document.querySelector(".total").textContent = PROJECTS.length;
+document.querySelector(".total")?.replaceChildren(PROJECTS.length);   // optional project count next to the heading
 
 /* ===== Tag filter ===== */
 let active = "All";
