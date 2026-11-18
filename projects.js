@@ -108,7 +108,7 @@ const PROJECTS = [
     coverText: "Nine\nto Five", coverBg: "##2A3A52", coverInk: "#E3F1EE",
     roleShort: "Concept designer, level designer", duration: "48 Hours",
     tags: ["Level design", "Unity", "3D"], cats: ["Games"], lobes: 7,
-    summary: "Created for the Pitt 2026 Games 4 Social Impact Game Jam. The theme was 'dolly'. You are a newly hired Jamazon employee, working 9 to 5. You have the job of packaging items into boxes for customers, placing them on the dolly, and bringing them to the delivery truck.",
+    summary: "Created for the Pitt 2026 Games 4 Social Impact Game Jam. You have the job of packaging items into boxes for customers and bringing them to the delivery truck.",
     overview: "The user must deliver at least 30 boxes to the delivery truck within a time limit of three minutes.",
     challenge: "The jam's theme was \"dolly.\" We built the game's core loop around one: pack the order, load the dolly, and make the delivery.",
     role: "Concept design and level design.",
