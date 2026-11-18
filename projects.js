@@ -5,7 +5,8 @@
      cover      "spruce/img1.png"   cover for the grid and project page (path from the site root)
      coverPos   "left center"       which part to keep when the cover is cropped
      coverFit   "contain"           show a logo whole on coverBg instead of cropping it
-     gallery    [{ src: "img/anemoia/1.jpg", caption: "Early blockout" }, ...]
+     gallery    [{ src: "spruce/sketch.png", caption: "Early sketch" }, ...]   slideshow in the Process section
+                add  bg: "#FFFFFF"  to an image with a transparent background
      video      YouTube or Vimeo EMBED link, e.g. "https://www.youtube.com/embed/VIDEO_ID"
      cats       drive the filter chips on the home page
      tags       shown on cards and the project page (keep to two)
@@ -16,7 +17,7 @@ const PROJECTS = [
     page: "anemoia-design/index.html",   // Anemoia has its own long-form page instead of project.html
     cover: "anemoia-design/images/coverImage.png", coverPos: "left center",
     roleShort: "Project manager, narrative designer, lead artist", duration: "Spring 2026",
-    tags: ["VR", "Narrative design"], cats: ["VR", "Narrative", "Games"], lobes: 9,
+    tags: ["VR", "Narrative design", "Unity"], cats: ["VR", "Narrative", "Games"], lobes: 9,
     summary: "A VR narrative for Meta Quest 2 about a queer student coming home from college and stepping into the objects of a childhood they never felt present in.",
     tools: ["Unity", "C#", "Meta Quest 2", "SideQuest"],
     links: [
@@ -66,7 +67,12 @@ const PROJECTS = [
     role: "[Your role on the team.]",
     highlights: ["[A key design decision]", "[How the modules connect]"],
     process: "[From the theme reveal to the final presentation.]",
-    gallery: [],
+    gallery: [
+      { src: "spruce/15f71719-6355-400e-bf7b-f163aa8ad9e7.png", caption: "Playground module concept", bg: "#F0FBF5" },
+      { src: "spruce/fea9cee4-6491-44a0-8b1b-7994c8901417.png", caption: "Early sketch of the app's playground page", bg: "#FFFFFF" },
+      { src: "spruce/b8eb98a7-0140-4a8c-a867-f17ea76340b9.png", caption: "Spruce color palette", bg: "#FFFFFF" },
+      { src: "spruce/78828d13-bc7b-47a9-a659-b19b59d3932b.png", caption: "Alternate logo colorway", bg: "#F0FBF5" }
+    ],
     video: "",
     outcome: "[How the presentation went.]",
     reflection: "[What designing under a time limit taught you.]",
@@ -84,7 +90,13 @@ const PROJECTS = [
     role: "[What you did on the team.]",
     highlights: ["[Highlight]", "[Highlight]"],
     process: "[How the game came together.]",
-    gallery: [],
+    gallery: [
+      { src: "paperworkx/paperworkxCover.png", caption: "In-game screenshot" },
+      { src: "paperworkx/e6020cad-f42a-4edb-b73f-83874dc599e1.png", caption: "Title art" },
+      { src: "paperworkx/50f5ba64-e696-4f45-8935-2906a363b1cd.png", caption: "Alternate title screen" },
+      { src: "paperworkx/ca6ac338-4d51-4ab2-9d50-ddb58f78fd28.png", caption: "In-game poster designs" },
+      { src: "paperworkx/7fc59f41-f69c-4a12-b8c5-ca640a667a5e.png", caption: "Mars relocation poster" }
+    ],
     video: "",
     outcome: "[Where it ended up.]",
     reflection: "[What you learned.]",
@@ -95,13 +107,13 @@ const PROJECTS = [
   { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Fall 2026 Game Jam (Games 4 Social Impact)",
     cover: "nine-to-five/nineToFiveTitle.png", coverFit: "contain", coverBg: "#47704C",
     roleShort: "Concept designer, level designer", duration: "48 Hours",
-    tags: ["Level design"], cats: ["Games"], lobes: 7,
+    tags: ["Level design", "Unity"], cats: ["Games"], lobes: 7,
     summary: "Made for the Pitt Games 4 Social Impact Game Jam. As a new Jamazon employee, pack customer orders, load them onto a dolly, and get them to the truck before you miss your daily quota.",
     overview: "You're a newly hired Jamazon employee working nine to five. Your job is to package items into boxes for customers, stack them on a dolly, and bring them out to the delivery truck, all while keeping up with your daily quota.",
     challenge: "The jam's theme was \"dolly.\" We built the game's core loop around one: pack the order, load the dolly, and make the delivery.",
     role: "Concept design and level design.",
     gallery: [],
-    video: "",
+    video: "https://youtu.be/JteiiFaTx_g",
     team: [["Myself", "Level design"], ["Anish", "Programming"], ["Shannon ", "Programming, art, 3D Modeling"]],
     tools: ["Unity", "Blender", "Visual Studio Code"],
     links: [
@@ -119,10 +131,17 @@ const PROJECTS = [
     role: "Concept design, storyboarding",
     highlights: ["Designing the storyboard for the anomoly face graphics displayed on the LED screen", "Designing and mapping out the inital concept designs with group"],
     process: "[Prototyping the hardware and testing the ARG with players.]",
-    gallery: [],
+    gallery: [
+      { src: "arduino-anomaly-device/20251122_160230.jpg", caption: "The assembled device" },
+      { src: "arduino-anomaly-device/1.png", caption: "Flowchart of the game's logic" },
+      { src: "arduino-anomaly-device/2.png", caption: "Storyboard of the device's screens" },
+      { src: "arduino-anomaly-device/face.png", caption: "Anomaly face on the LCD screen" },
+      { src: "arduino-anomaly-device/lcd_configure.png", caption: "LCD wiring diagram" },
+      { src: "arduino-anomaly-device/gps2.webp", caption: "Testing the GPS module" }
+    ],
     video: "",
     outcome: "[How players reacted.]",
-    reflection: "[What working with hardware taught you.]",
+    reflection: "This project was one of my first times working with and designing technical hardware, especially with using it to tell an interactive narrative. ",
     team: [["Myself", "Concept design, storyboarding"], ["Chris", "Programming, hardware assembly"]],
     tools: ["Arduino", "Arduino IDE", "GPS module"], links: [] }
 ];

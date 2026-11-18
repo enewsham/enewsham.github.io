@@ -16,7 +16,7 @@
   <div class="wrap">
     <a class="brand" href="index.html">Eli Newsham</a>
     <nav aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="#contact">Contact</a></nav>
-    <a class="btn solid small" href="mailto:newshameli@gmail.com">Get in touch</a>
+    <a class="btn solid small" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
   </div>
 </header>
 
@@ -68,16 +68,18 @@ if (!p) {
   const prev = PROJECTS[(i - 1 + n) % n], next = PROJECTS[(i + 1) % n];
   const shots = (p.gallery || []).map(g => typeof g === "string" ? { src: g, caption: "" } : g);
 
+  /* Slideshow strip, same as the Anemoia page. Empty galleries keep the placeholder grid. */
   const gallery = shots.length
-    ? shots.map((g, k) => `<figure><button type="button" data-shot="${k}" aria-label="Enlarge image${g.caption ? ": " + g.caption : ""}">${cover(p, "", g.src)}</button>${g.caption ? `<figcaption>${g.caption}</figcaption>` : ""}</figure>`).join("")
-    : [0, 1, 2].map(() => `<figure>${cover(p, "", null, "Add a process image")}</figure>`).join("");
+    ? `<div class="strip-wrap" data-gallery="${p.title}"><div class="strip">${shots.map((g, k) =>
+        `<button type="button" data-shot="${k}" aria-label="Enlarge: ${g.caption || `${p.title} image ${k + 1}`}"${g.bg ? ` style="background:${g.bg}"` : ""}><img loading="lazy" src="${ROOT}${g.src}" alt="${g.caption || ""}"></button>`).join("")}</div></div>`
+    : `<div class="pj-gallery">${[0, 1, 2].map(() => `<figure>${cover(p, "", null, "Add a process image")}</figure>`).join("")}</div>`;
 
   /* Each section appears only if it has content */
   const sections = [
     ["overview", "Overview", p.overview && `<p class="text">${p.overview}</p>`],
     ["challenge", "The challenge", p.challenge && `<p class="text">${p.challenge}</p>`],
     ["role", "My role", (p.role || p.highlights?.length) && `${p.role ? `<p class="text">${p.role}</p>` : ""}${p.highlights?.length ? `<ul class="pj-list">${li(p.highlights)}</ul>` : ""}`],
-    ["process", "Process", `${p.process ? `<p class="text">${p.process}</p>` : ""}<div class="pj-gallery">${gallery}</div>`],
+    ["process", "Process", `${p.process ? `<p class="text">${p.process}</p>` : ""}${gallery}`],
     ["video", "Video", p.video
       ? `<div class="pj-video"><iframe src="${p.video}" title="${p.title} video" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`
       : `<div class="pj-video empty-slot"><span class="msr" aria-hidden="true">play_circle</span>Add a gameplay or walkthrough video by setting <code>video</code> to a YouTube or Vimeo embed link.</div>`],
@@ -94,7 +96,7 @@ if (!p) {
       <h1>${p.title}</h1>
       <p class="summary">${p.summary}</p>
       <ul class="tags">${li(p.tags)}</ul>
-      ${p.links?.length ? `<div class="pj-links" style="margin-top:32px">${p.links.map((l, k) =>
+      ${p.links?.length ? `<div class="pj-links" style="margin-top:2rem">${p.links.map((l, k) =>
         `<a class="btn ${k ? "line" : "solid"}" href="${l.href}" target="_blank" rel="noopener noreferrer">${l.label}<span class="msr" aria-hidden="true">arrow_outward</span></a>`).join("")}</div>` : ""}
     </header>
     <dl class="pj-meta">
@@ -136,7 +138,12 @@ if (!p) {
   /* ===== Lightbox for process images ===== */
   const lb = document.querySelector(".lightbox"), lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
   let at = 0;
-  const show = k => { at = (k + shots.length) % shots.length; lbImg.src = shots[at].src; lbImg.alt = shots[at].caption || ""; lbCap.textContent = shots[at].caption || ""; };
+  const show = k => {
+    at = (k + shots.length) % shots.length;
+    lbImg.src = ROOT + shots[at].src; lbImg.alt = shots[at].caption || "";
+    const count = shots.length > 1 ? `${at + 1} of ${shots.length}` : "";
+    lbCap.textContent = [shots[at].caption, count && (shots[at].caption ? `(${count})` : count)].filter(Boolean).join(" ");
+  };
   lb.querySelectorAll("[data-step]").forEach(b => b.hidden = shots.length < 2);
   mount.addEventListener("click", e => { const b = e.target.closest("[data-shot]"); if (b) { show(+b.dataset.shot); lb.showModal(); } });
   lb.addEventListener("click", e => {
@@ -144,6 +151,8 @@ if (!p) {
     const s = e.target.closest("[data-step]"); if (s) show(at + Number(s.dataset.step));
   });
   lb.addEventListener("keydown", e => { if (e.key === "ArrowRight") show(at + 1); if (e.key === "ArrowLeft") show(at - 1); });
+  lb.addEventListener("close", () => lbImg.removeAttribute("src"));
+  mount.querySelectorAll("[data-gallery]").forEach(initStrip);
 }
 
 initChrome();

@@ -81,6 +81,29 @@ document.addEventListener("click", e => {
   if (el) { el.setAttribute("tabindex", "-1"); el.focus({ preventScroll: true }); }
 });
 
+/* ===== Image strip: back/forward buttons and an image count under a .strip =====
+   Markup: <div class="strip-wrap" data-gallery="Name"><div class="strip"><button><img></button>...</div></div> */
+function initStrip(wrap) {
+  const strip = wrap.querySelector(".strip"), n = strip.querySelectorAll("img").length;
+  const controls = document.createElement("div");
+  controls.className = "strip-controls";
+  controls.innerHTML = `<span class="count">${n} image${n === 1 ? "" : "s"}</span>
+    <button class="icon-btn" type="button" data-dir="-1" aria-label="Scroll ${wrap.dataset.gallery} gallery back"><span class="msr" aria-hidden="true">arrow_back</span></button>
+    <button class="icon-btn" type="button" data-dir="1" aria-label="Scroll ${wrap.dataset.gallery} gallery forward"><span class="msr" aria-hidden="true">arrow_forward</span></button>`;
+  wrap.append(controls);
+  const [back, fwd] = controls.querySelectorAll("button");
+  const sync = () => {
+    back.disabled = strip.scrollLeft < 4;
+    fwd.disabled = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4;
+    controls.hidden = back.disabled && fwd.disabled && n < 2;
+  };
+  controls.addEventListener("click", e => { const b = e.target.closest("[data-dir]"); if (b) strip.scrollBy({ left: strip.clientWidth * .8 * b.dataset.dir }); });
+  strip.addEventListener("scroll", sync, { passive: true });
+  addEventListener("resize", sync);
+  strip.querySelectorAll("img").forEach(img => img.addEventListener("load", sync));
+  sync();
+}
+
 function initChrome() {
   const bar = document.querySelector(".top");
   addEventListener("scroll", () => bar.classList.toggle("scrolled", scrollY > 8), { passive: true });
