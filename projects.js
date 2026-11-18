@@ -5,6 +5,7 @@
      cover      "spruce/img1.png"   cover for the grid and project page (path from the site root)
      coverPos   "left center"       which part to keep when the cover is cropped
      coverFit   "contain"           show a logo whole on coverBg instead of cropping it
+     coverText  "Strong\nTogether3D"  no image yet? show this text on coverBg (coverInk = text color)
      gallery    [{ src: "spruce/sketch.png", caption: "Early sketch" }, ...]   slideshow in the Process section
                 add  bg: "#FFFFFF"  to an image with a transparent background
      video      YouTube or Vimeo EMBED link, e.g. "https://www.youtube.com/embed/VIDEO_ID"
@@ -38,6 +39,7 @@ const PROJECTS = [
     video: "",
     outcome: "[Current state of the build and what's coming next.]",
     reflection: "[What building this solo has taught you.]",
+    team: [["Eli Newsham", "Design, programming, systems"]],
     tools: ["Unity", "C#", "Git"], links: [] },
 
   { id: "strongtogether3d", title: "StrongTogether3D", year: "2026", kind: "Team project", context: "SCI Capstone",
@@ -54,6 +56,7 @@ const PROJECTS = [
     video: "",
     outcome: "[How the capstone was presented and received.]",
     reflection: "[What working on a large shared Unity project taught you.]",
+    team: [["[Teammate]", "[Role]"], ["[Teammate]", "[Role]"]],
     tools: ["Unity", "Git", "GitHub"], links: [] },
 
   { id: "spruce", title: "Spruce", year: "2026", kind: "Team project", context: "Pitt Design Jam",
@@ -75,6 +78,7 @@ const PROJECTS = [
     video: "",
     outcome: "[How the presentation went.]",
     reflection: "[What designing under a time limit taught you.]",
+    team: [["[Teammate]", "[Role]"]],
     tools: ["Figma", "3D Modeling", "3D Printing"],
     links: [{ href: "https://sonicdrives.itch.io/Spruce/", label: "View on itch.io" }] },
 
@@ -98,11 +102,12 @@ const PROJECTS = [
     video: "",
     outcome: "[Where it ended up.]",
     reflection: "[What you learned.]",
+    team: [["[Teammate]", "[Role]"]],
     tools: ["Unity"],
     links: [{ href: "https://sonicdrives.itch.io/paperworks", label: "Play on itch.io" }] },
 
   { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Fall 2026 Game Jam (Games 4 Social Impact)",
-    cover: "nine-to-five/nineToFiveTitle.png", coverFit: "contain", coverBg: "#47704C",
+    cover: "nine-to-five/nineToFiveTitle.png", coverFit: "contain", coverBg: "#1E4D4A",
     roleShort: "Concept designer, level designer", duration: "48 Hours",
     tags: ["Level design", "Unity", "3D"], cats: ["Games"], lobes: 7,
     summary: "Made for the Pitt Games 4 Social Impact Game Jam. As a new Jamazon employee, pack customer orders, load them onto a dolly, and get them to the truck before you miss your daily quota.",
@@ -139,6 +144,7 @@ const PROJECTS = [
     video: "",
     outcome: "[How players reacted.]",
     reflection: "This project was one of my first times working with and designing technical hardware, especially with using it to tell an interactive narrative. ",
+    team: [["Myself", "Concept design, storyboarding"], ["Chris", "Programming, hardware assembly"]],
     tools: ["Arduino", "Arduino IDE", "GPS module"], links: [] }
 ];
 

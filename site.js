@@ -23,6 +23,11 @@ function cover(p, cls = "", src = p.cover, label = "Add a cover image") {
   const isCover = src && src === p.cover;
   const fit = isCover && p.coverFit === "contain" ? " contain" : "";
   const style = isCover ? [p.coverBg && `background:${p.coverBg}`, p.coverPos && `--pos:${p.coverPos}`].filter(Boolean).join(";") : "";
+  /* Text cover: no image yet, but coverText is set. Line breaks (\n) in coverText are kept. */
+  if (!src && p.coverText) {
+    const ink = p.coverInk ? `;color:${p.coverInk}` : "";
+    return `<div class="cover text-cover ${cls}" style="background:${p.coverBg || "var(--md-sys-color-surface-container-high)"}${ink}"><span class="cover-text" aria-hidden="true">${p.coverText}</span></div>`;
+  }
   return `<div class="cover ${cls}${fit}"${style ? ` style="${style}"` : ""}>${src
     ? `<img src="${ROOT}${src}" alt="" loading="lazy">`
     : `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="${shapePath(p.lobes, .08, 40, p.lobes * .1)}"/></svg><span class="ph">${label}</span>`}</div>`;

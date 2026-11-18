@@ -70,6 +70,12 @@ a { color: inherit; text-decoration: none; }
 .cover .ph { align-self: end; justify-self: start; margin: 1rem; font-size: max(0.8125rem, 14px); color: var(--md-sys-color-on-surface-variant); }
 .cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, center); transition: transform 700ms var(--ease); }
 .cover.contain img { object-fit: contain; padding: 4%; }
+/* Text-only cover (coverText in projects.js). Type scales with the card's width. */
+.text-cover { container-type: inline-size; color: var(--md-sys-color-on-surface); }
+.text-cover .cover-text {
+  align-self: end; justify-self: start; margin: 7cqw; white-space: pre-line;
+  font-size: 10cqw; line-height: .92; font-weight: 600; letter-spacing: -.045em;
+}
 
 /* ---------- Header ---------- */
 .top {
