@@ -38,10 +38,10 @@ const PROJECTS = [
     video: "",
     outcome: "[Current state of the build and what's coming next.]",
     reflection: "[What building this solo has taught you.]",
-    team: [["Eli Newsham", "Design, programming, systems"]],
     tools: ["Unity", "C#", "Git"], links: [] },
 
   { id: "strongtogether3d", title: "StrongTogether3D", year: "2026", kind: "Team project", context: "SCI Capstone",
+    coverText: "Strong\nTogether3D", coverBg: "#1E4D4A", coverInk: "#E3F1EE",
     roleShort: "Environment and interaction design", duration: "[e.g. 2 semesters]",
     tags: ["Environment design", "Unity"], cats: ["Games", "Environments"], lobes: 6,
     summary: "An interactive 3D hospital environment built in Unity with a capstone team.",
@@ -54,7 +54,6 @@ const PROJECTS = [
     video: "",
     outcome: "[How the capstone was presented and received.]",
     reflection: "[What working on a large shared Unity project taught you.]",
-    team: [["[Teammate]", "[Role]"], ["[Teammate]", "[Role]"]],
     tools: ["Unity", "Git", "GitHub"], links: [] },
 
   { id: "spruce", title: "Spruce", year: "2026", kind: "Team project", context: "Pitt Design Jam",
@@ -76,7 +75,6 @@ const PROJECTS = [
     video: "",
     outcome: "[How the presentation went.]",
     reflection: "[What designing under a time limit taught you.]",
-    team: [["[Teammate]", "[Role]"]],
     tools: ["Figma", "3D Modeling", "3D Printing"],
     links: [{ href: "https://sonicdrives.itch.io/Spruce/", label: "View on itch.io" }] },
 
@@ -100,7 +98,6 @@ const PROJECTS = [
     video: "",
     outcome: "[Where it ended up.]",
     reflection: "[What you learned.]",
-    team: [["[Teammate]", "[Role]"]],
     tools: ["Unity"],
     links: [{ href: "https://sonicdrives.itch.io/paperworks", label: "Play on itch.io" }] },
 
@@ -142,7 +139,6 @@ const PROJECTS = [
     video: "",
     outcome: "[How players reacted.]",
     reflection: "This project was one of my first times working with and designing technical hardware, especially with using it to tell an interactive narrative. ",
-    team: [["Myself", "Concept design, storyboarding"], ["Chris", "Programming, hardware assembly"]],
     tools: ["Arduino", "Arduino IDE", "GPS module"], links: [] }
 ];
 
