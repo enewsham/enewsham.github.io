@@ -27,6 +27,7 @@ const PROJECTS = [
     ] },
 
   { id: "genesis", title: "MACHINA : GENESIS", year: "Ongoing", kind: "Personal project", context: "Solo development",
+    coverText: "MACHINA :\nGENESIS", coverBg: "##2A3A52", coverInk: "#E3F1EE",
     roleShort: "Solo developer", duration: "[Start date] to present",
     tags: ["Immersive sim", "Unity"], cats: ["Games", "Narrative"], lobes: 12,
     summary: "A 3D immersive sim inspired by the original Deus Ex, set in a Fallout-style wasteland.",
@@ -43,7 +44,7 @@ const PROJECTS = [
     tools: ["Unity", "C#", "Git"], links: [] },
 
   { id: "strongtogether3d", title: "StrongTogether3D", year: "2026", kind: "Team project", context: "SCI Capstone",
-    coverText: "Strong\nTogether3D", coverBg: "#1E4D4A", coverInk: "#E3F1EE",
+    coverText: "Strong\nTogether3D", coverBg: "##2A3A52", coverInk: "#E3F1EE",
     roleShort: "Environment and interaction design", duration: "[e.g. 2 semesters]",
     tags: ["Environment design", "Unity"], cats: ["Games", "Environments"], lobes: 6,
     summary: "An interactive 3D hospital environment built in Unity with a capstone team.",
@@ -107,7 +108,7 @@ const PROJECTS = [
     links: [{ href: "https://sonicdrives.itch.io/paperworks", label: "Play on itch.io" }] },
 
   { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Fall 2026 Game Jam (Games 4 Social Impact)",
-    coverText: "Nine\nto Five", coverBg: "#1E4D4A", coverInk: "#E3F1EE",
+    coverText: "Nine\nto Five", coverBg: "##2A3A52", coverInk: "#E3F1EE",
     roleShort: "Concept designer, level designer", duration: "48 Hours",
     tags: ["Level design", "Unity", "3D"], cats: ["Games"], lobes: 7,
     summary: "Made for the Pitt Games 4 Social Impact Game Jam. As a new Jamazon employee, pack customer orders, load them onto a dolly, and get them to the truck before you miss your daily quota.",
