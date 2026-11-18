@@ -14,10 +14,10 @@
    Text in [brackets] is a placeholder for you to replace.
    ===================================================================== */
 const PROJECTS = [
-  { id: "anemoia", title: "Anemoia", year: "2026", kind: "Team project, 3 people", context: "DNID English Capstone",
+  { id: "anemoia", title: "Anemoia", year: "2026", kind: "Team project", context: "English Capstone",
     page: "anemoia-design/index.html",   // Anemoia has its own pg
     cover: "img/anemoia/cover/anemoia-cover.png", coverPos: "left center",
-    roleShort: "Project manager, narrative designer, lead artist", duration: "Spring 2026",
+    roleShort: "Project manager, narrative designer, lead artist", duration: "One Semester",
     tags: ["VR", "Narrative design", "Unity"], cats: ["VR", "Narrative", "Games"], lobes: 9,
     summary: "A VR narrative for Meta Quest 2 about a transgender student coming back home from college and stepping into the objects of a childhood they never felt present in.",
     tools: ["Unity", "C#", "Visual Studio Code", "Meta Quest 2", "SideQuest"],
@@ -54,9 +54,9 @@ const PROJECTS = [
     reflection: "Placeholder",
     tools: ["Unity", "Git", "GitHub"], links: [] },
 
-  { id: "spruce", title: "Spruce", year: "2026", kind: "Team project", context: "Pitt Design Jam",
+  { id: "spruce", title: "Spruce", year: "2026", kind: "Team project", context: "Pitt Design Jam 2026",
     cover: "spruce/img1.png", coverFit: "contain", coverBg: "#F0FBF5",
-    roleShort: "Designer", duration: "1 week",
+    roleShort: "Designer", duration: "One Week",
     tags: ["Physical design", "UX"], cats: ["Physical", "UX"], lobes: 5,
     summary: "Winner for Best All Around Project at the Pitt 2026 Design Jam. Connectable playground modules that add park amenities, plus an app that helps local families meet.",
     overview: "For the Design Jam's theme of playgrounds, my team proposed a series of playground modules that connect to provide park amenities. A companion mobile app lets families meet people in their community and see information about nearby playgrounds.",
@@ -74,7 +74,7 @@ const PROJECTS = [
     tools: ["Figma", "3D Modeling", "3D Printing"],
     links: [{ href: "https://sonicdrives.itch.io/Spruce/", label: "View on itch.io" }] },
 
-  { id: "paperworkx", title: "Paperworkx", year: "2025", kind: "Team project", context: "[Course or event]",
+  { id: "paperworkx", title: "Paperworkx", year: "2025", kind: "Team project", context: "Pitt Game Jam 2025",
     cover: "paperworkx/paperworkxCover.png",
     roleShort: "Narrative designer, artist", duration: "48 Hours",
     tags: ["2D", "Unity"], cats: ["Games", "2D", "Narrative", "Unity"], lobes: 4,
@@ -96,7 +96,7 @@ const PROJECTS = [
     tools: ["Unity"],
     links: [{ href: "https://sonicdrives.itch.io/paperworks", label: "Play on itch.io" }] },
 
-  { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Fall 2026 Game Jam (Games 4 Social Impact)",
+  { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Game Jam 2026",
     coverText: "Nine\nto Five", coverBg: "##2A3A52", coverInk: "#E3F1EE",
     roleShort: "Level Designer", duration: "48 Hours",
     tags: ["Level design", "Unity", "3D"], cats: ["Games", "Unity", "3D"], lobes: 7,
@@ -112,9 +112,9 @@ const PROJECTS = [
       { href: "https://github.com/Anish-Satish/Amazon-Simulator", label: "GitHub repo" }
     ] },
 
-  { id: "anomaly", title: "Arduino Anomaly Detector", year: "2025", kind: "Team project", context: "DNID final project",
+  { id: "anomaly", title: "Arduino Anomaly Detector", year: "2025", kind: "Team project", context: "DNID Course Final Project",
     cover: "arduino-anomaly-device/20251122_160230.jpg",
-    roleShort: "Design, Storyboarding", duration: "5 Months",
+    roleShort: "Designer, Concept Artist", duration: "One Semester",
     tags: ["ARG", "Arduino"], cats: ["Physical", "Narrative"], lobes: 8,
     summary: "A handheld Arduino device with a GPS module that drives a physically interactive ARG.",
     overview: "Using an Arduino controller, we assembled a device with a GPS module to build a physically interactive alternate reality game. It was programmed in the Arduino IDE.",
