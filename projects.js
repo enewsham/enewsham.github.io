@@ -15,12 +15,12 @@
    ===================================================================== */
 const PROJECTS = [
   { id: "anemoia", title: "Anemoia", year: "2026", kind: "Team project, 3 people", context: "DNID English Capstone",
-    page: "anemoia-design/index.html",   // Anemoia has its own long-form page instead of project.html
+    page: "anemoia-design/index.html",   // Anemoia has its own pg
     cover: "img/anemoia/cover/anemoia-cover.png", coverPos: "left center",
     roleShort: "Project manager, narrative designer, lead artist", duration: "Spring 2026",
     tags: ["VR", "Narrative design", "Unity"], cats: ["VR", "Narrative", "Games"], lobes: 9,
-    summary: "A VR narrative for Meta Quest 2 about a queer student coming home from college and stepping into the objects of a childhood they never felt present in.",
-    tools: ["Unity", "C#", "Meta Quest 2", "SideQuest"],
+    summary: "A VR narrative for Meta Quest 2 about a transgender student coming back home from college and stepping into the objects of a childhood they never felt present in.",
+    tools: ["Unity", "C#", "Visual Studio Code", "Meta Quest 2", "SideQuest"],
     links: [
       { href: "https://sidequestvr.com/app/55470", label: "Play on SideQuest" },
       { href: "https://github.com/CaleMoore28/TheHeart", label: "GitHub repo" }
@@ -28,7 +28,7 @@ const PROJECTS = [
 
   { id: "genesis", title: "MACHINA : GENESIS", year: "Ongoing", kind: "Personal project", context: "Solo development",
     coverText: "MACHINA :\nGENESIS", coverBg: "##2A3A52", coverInk: "#E3F1EE",
-    roleShort: "Solo developer", duration: "[Start date] to present",
+    roleShort: "Solo developer", duration: "Ongoing",
     tags: ["Unity"], cats: ["Games", "Narrative", "Unity"], lobes: 12,
     summary: "Game inspired by the original Deus Ex, set in a Fallout-style wasteland.",
     overview: "Heavily inspired by the original Deus Ex, with a wasteland world inspired by Fallout. Carries themes of self-discovery, finding your place in the world, the ethics of artificial intelligence, the social problems of the digital age, recovery, and making peace with the past.",
@@ -37,12 +37,12 @@ const PROJECTS = [
     process: "Placeholder",
     gallery: [],
     video: "",
-    reflection: "[What building this solo has taught you.]",
+    reflection: "Placeholder",
     tools: ["Unity", "C#", "Git"], links: [] },
 
   { id: "strongtogether3d", title: "StrongTogether3D", year: "2026", kind: "Team project", context: "SCI Capstone",
     coverText: "Strong\nTogether3D", coverBg: "##2A3A52", coverInk: "#E3F1EE",
-    roleShort: "Environment and interaction design", duration: "[e.g. 2 semesters]",
+    roleShort: "Unity design, asset direction", duration: "One Semester",
     tags: ["3D", "Unity"], cats: ["Games", "3D", "Unity"], lobes: 6,
     summary: "Capstone project placeholder desc",
     overview: "Placeholder",
@@ -56,7 +56,7 @@ const PROJECTS = [
 
   { id: "spruce", title: "Spruce", year: "2026", kind: "Team project", context: "Pitt Design Jam",
     cover: "spruce/img1.png", coverFit: "contain", coverBg: "#F0FBF5",
-    roleShort: "Concept Designer", duration: "1 week",
+    roleShort: "Designer", duration: "1 week",
     tags: ["Physical design", "UX"], cats: ["Physical", "UX"], lobes: 5,
     summary: "Winner for Best All Around Project at the Pitt 2026 Design Jam. Connectable playground modules that add park amenities, plus an app that helps local families meet.",
     overview: "For the Design Jam's theme of playgrounds, my team proposed a series of playground modules that connect to provide park amenities. A companion mobile app lets families meet people in their community and see information about nearby playgrounds.",
@@ -70,19 +70,19 @@ const PROJECTS = [
       { src: "spruce/78828d13-bc7b-47a9-a659-b19b59d3932b.png", caption: "Alternate logo colorway", bg: "#F0FBF5" }
     ],
     video: "",
-    reflection: "[What designing under a time limit taught you.]",
+    reflection: "Placeholder",
     tools: ["Figma", "3D Modeling", "3D Printing"],
     links: [{ href: "https://sonicdrives.itch.io/Spruce/", label: "View on itch.io" }] },
 
   { id: "paperworkx", title: "Paperworkx", year: "2025", kind: "Team project", context: "[Course or event]",
     cover: "paperworkx/paperworkxCover.png",
-    roleShort: "Narrative design, art", duration: "48 Hours",
+    roleShort: "Narrative designer, artist", duration: "48 Hours",
     tags: ["2D", "Unity"], cats: ["Games", "2D", "Narrative", "Unity"], lobes: 4,
     summary: "Winner for Best Narrative Design at the Pitt 2025 Game Jam. Play as a robot on a post-apocalyptic Earth who fills out paperwork in order to immigrate to Mars.",
     overview: "Placeholder",
     challenge: "Placeholder",
     role: "Placeholder",
-    highlights: ["[Highlight]", "[Highlight]"],
+    highlights: "Placeholder",
     process: "Placeholder",
     gallery: [
       { src: "paperworkx/paperworkxCover.png", caption: "In-game screenshot" },
@@ -92,14 +92,13 @@ const PROJECTS = [
       { src: "paperworkx/7fc59f41-f69c-4a12-b8c5-ca640a667a5e.png", caption: "Mars relocation poster" }
     ],
     video: "",
-    outcome: "[Where it ended up.]",
-    reflection: "[What you learned.]",
+    reflection: "Placeholder",
     tools: ["Unity"],
     links: [{ href: "https://sonicdrives.itch.io/paperworks", label: "Play on itch.io" }] },
 
   { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Fall 2026 Game Jam (Games 4 Social Impact)",
     coverText: "Nine\nto Five", coverBg: "##2A3A52", coverInk: "#E3F1EE",
-    roleShort: "Concept designer, level designer", duration: "48 Hours",
+    roleShort: "Level Designer", duration: "48 Hours",
     tags: ["Level design", "Unity", "3D"], cats: ["Games", "Unity", "3D"], lobes: 7,
     summary: "Created for the Pitt 2026 Game Jam. The player packages items into boxes for customers and brings them to the delivery truck.",
     overview: "The user must deliver at least 30 boxes to the delivery truck within a time limit of three minutes.",
@@ -115,7 +114,7 @@ const PROJECTS = [
 
   { id: "anomaly", title: "Arduino Anomaly Detector", year: "2025", kind: "Team project", context: "DNID final project",
     cover: "arduino-anomaly-device/20251122_160230.jpg",
-    roleShort: "Concept design, storyboarding", duration: "5 Months",
+    roleShort: "Design, Storyboarding", duration: "5 Months",
     tags: ["ARG", "Arduino"], cats: ["Physical", "Narrative"], lobes: 8,
     summary: "A handheld Arduino device with a GPS module that drives a physically interactive ARG.",
     overview: "Using an Arduino controller, we assembled a device with a GPS module to build a physically interactive alternate reality game. It was programmed in the Arduino IDE.",
@@ -132,7 +131,7 @@ const PROJECTS = [
       { src: "arduino-anomaly-device/gps2.webp", caption: "Testing the GPS module" }
     ],
     video: "",
-    reflection: "This project was one of my first times working with and designing technical hardware, especially with using it to tell an interactive narrative. ",
+    reflection: "This project was one of my first times working with and designing technical hardware, especially with using it to tell an interactive narrative.",
     tools: ["Arduino", "Arduino IDE", "GPS module"], links: [] }
 ];
 
