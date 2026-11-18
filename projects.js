@@ -15,7 +15,7 @@
 const PROJECTS = [
   { id: "anemoia", title: "Anemoia", year: "2026", kind: "Team project, 3 people", context: "DNID English Capstone",
     page: "anemoia-design/index.html",   // Anemoia has its own long-form page instead of project.html
-    cover: "anemoia-design/images/coverImage.png?v=2", coverPos: "left center",
+    cover: "anemoia-design/images/anemoia-cover.png", coverPos: "left center",
     roleShort: "Project manager, narrative designer, lead artist", duration: "Spring 2026",
     tags: ["VR", "Narrative design", "Unity"], cats: ["VR", "Narrative", "Games"], lobes: 9,
     summary: "A VR narrative for Meta Quest 2 about a queer student coming home from college and stepping into the objects of a childhood they never felt present in.",
@@ -107,7 +107,7 @@ const PROJECTS = [
   { id: "ninetofive", title: "Nine to Five", year: "2026", kind: "Team project", context: "Pitt Fall 2026 Game Jam (Games 4 Social Impact)",
     cover: "nine-to-five/nineToFiveTitle.png", coverFit: "contain", coverBg: "#47704C",
     roleShort: "Concept designer, level designer", duration: "48 Hours",
-    tags: ["Level design", "Unity"], cats: ["Games"], lobes: 7,
+    tags: ["Level design", "Unity", "3D"], cats: ["Games"], lobes: 7,
     summary: "Made for the Pitt Games 4 Social Impact Game Jam. As a new Jamazon employee, pack customer orders, load them onto a dolly, and get them to the truck before you miss your daily quota.",
     overview: "You're a newly hired Jamazon employee working nine to five. Your job is to package items into boxes for customers, stack them on a dolly, and bring them out to the delivery truck, all while keeping up with your daily quota.",
     challenge: "The jam's theme was \"dolly.\" We built the game's core loop around one: pack the order, load the dolly, and make the delivery.",
