@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anemoia: Design Narrative | Eli Newsham</title>
+<meta name="description" content="Anemoia is a VR narrative for Meta Quest 2 about memory, family, survival, and gender dysphoria. Design narrative by Eli Newsham.">
+<meta property="og:title" content="Anemoia: Design Narrative">
+<meta property="og:image" content="images/conceptart/finished/anemoiaCoverImage.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,300..700;1,300..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..24,300,0,0&display=block">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Eli Newsham</a>
+    <nav aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="#contact">Contact</a></nav>
+    <a class="btn solid small" href="mailto:newshameli@gmail.com">Get in touch</a>
+  </div>
+</header>
+
+<main class="wrap pj">
+  <a class="back" href="../index.html#work"><span class="msr" aria-hidden="true">arrow_back</span>All work</a>
+
+  <header class="pj-head">
+    <p class="kicker">DNID English Capstone design narrative</p>
+    <h1 style="margin-top:16px">Anemoia</h1>
+    <p class="definition">
+      <a class="word" href="https://www.thedictionaryofobscuresorrows.com/concept/anemoia" target="_blank" rel="noopener noreferrer">anemoia</a><span class="pos">n.</span>
+      nostalgia for a time, place, or experience one has never truly known.
+    </p>
+    <p class="summary">A VR narrative experience discussing memory, family, survival, and gender dysphoria.</p>
+    <ul class="tags"><li>VR</li><li>Narrative design</li></ul>
+    <div class="pj-links" style="margin-top:32px">
+      <a class="btn solid" href="https://sidequestvr.com/app/55470" target="_blank" rel="noopener noreferrer">Play on SideQuest<span class="msr" aria-hidden="true">arrow_outward</span></a>
+      <a class="btn line" href="https://github.com/CaleMoore28/TheHeart" target="_blank" rel="noopener noreferrer">GitHub repo<span class="msr" aria-hidden="true">arrow_outward</span></a>
+      <!-- <a class="btn line" href="YOUR_ITCH_LINK" target="_blank" rel="noopener noreferrer">itch.io<span class="msr" aria-hidden="true">arrow_outward</span></a> -->
+    </div>
+  </header>
+
+  <dl class="pj-meta">
+    <div><dt>Role</dt><dd>Project manager, narrative designer, lead artist</dd></div>
+    <div><dt>Medium</dt><dd>Virtual reality</dd></div>
+    <div><dt>Platform</dt><dd>Meta Quest 2</dd></div>
+    <div><dt>Engine</dt><dd>Unity</dd></div>
+    <div><dt>Year</dt><dd>2026</dd></div>
+    <div><dt>Course</dt><dd>DNID English Capstone</dd></div>
+  </dl>
+
+  <figure class="figure" style="margin-top:40px">
+    <img src="images/conceptart/finished/anemoiaCoverImage.png" alt="A person looking to their side with their hand on their cheek, puffing it out, staring into space. The title Anemoia sits to their left over a green-to-white gradient.">
+    <figcaption>Anemoia cover concept art</figcaption>
+  </figure>
+
+  <div class="pj-layout">
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#decisions">Decisions</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+        <li><a href="#works-cited">Works cited</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <!-- ===================== OVERVIEW ===================== -->
+      <section class="pj-section" id="overview">
+        <h2>Overview</h2>
+        <p class="big-question">Can VR create emotions, empathy, and an understanding of queer stories where other mediums struggle?</p>
+        <p class="text">Anemoia is a virtual reality (VR) game developed for the Meta Quest 2 using Unity that looks at how an interactive/immersive experience can convey the narrative of a queer student returning home from college for break. This game is created with the goal of examining the connections between gender, memory, family trauma, survival, and queer experiences.</p>
+        <p class="text">Using environmental storytelling through the form of interactive levels, the player examines objects in their childhood bedroom, triggering flashback sequences that gradually reveal the protagonist’s experiences with queerness and family. These are told through the main character entering into these objects and interacting with “minigames.”</p>
+        <p class="text">The narrative places a focus on the protagonist’s fear of the unknown, having to confront change, and navigating the uncertainty of the future. Anemoia is a word from the website The Dictionary of Obscure Sorrows and refers to the feeling of “nostalgia for a time you never experienced.” These are memories of a childhood filtered through the lens of gender they didn't yet have the language to describe, a past they can now see clearly and reflect on, allowing them to grieve for a past they did not get the chance to experience. A past where they felt connected rather than disconnected.</p>
+        <p class="text">It was a life they lived but did not feel present in; it wasn't really them. Every item they reflect on carries with it an emotional weight. Every book, photograph, shirt, etc. These forgotten objects hold a version of the past where they did not get to be their authentic self.</p>
+        <figure class="figure">
+          <img src="images/conceptart/finished/mm.png" alt="Finished concept art for Anemoia" loading="lazy">
+        </figure>
+      </section>
+
+      <!-- ===================== PROCESS ===================== -->
+      <section class="pj-section" id="process">
+        <h2>Process</h2>
+        <ol class="phases">
+          <li class="phase">
+            <span class="step">Phase 1</span>
+            <h3>Research</h3>
+            <p class="text">The research done for this project focused on areas of immersion in VR, the impact of spatial audio design, walking simulators, virtual experiences, storytelling methods, examination of the relationship between the user and their avatar, and transgender representation in games.</p>
+          </li>
+          <li class="phase">
+            <span class="step">Phase 2</span>
+            <h3>Early designs</h3>
+            <p class="text">We began with rough sketches, mapping out the project. I created pieces of character and environmental concept art while we began building the basics up in the Unity engine.</p>
+            <div class="strip-wrap" data-gallery="Early designs">
+              <div class="strip">
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/refMC-outfit1.png" alt="Main character outfit reference drawing"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/20260228_191122.jpg" alt="Character sketches drawn in pencil on notebook paper"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/20260228_191114.jpg" alt="Early concept art of a medieval town"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/BookObjectPng.png" alt="Concept art of the medieval town where the game's King Arthur story takes place"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/conceptArtKA.png" alt="Concept art for the King Arthur scene"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/3.jpg" alt="Early concept art for the main character's bedroom"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/1.jpg" alt="Bedroom concept art shown in several color palettes"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/20260228_191913.jpg" alt="Bedroom sketches drawn in pencil on notebook paper"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/START.jpg" alt="Early main menu design: a green-haired character in a bus window seat, beside a menu reading Start, Options, Exit"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/objectsSketches-book.png" alt="Concept art for the book object"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/sketches/objectsSketches-photograph.png" alt="Concept art for the photograph object"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/Screenshot%202026-02-24%20220332.png" alt="Sketch of the bus main menu"></button>
+              </div>
+            </div>
+          </li>
+          <li class="phase">
+            <span class="step">Phase 3</span>
+            <h3>Storyboarding</h3>
+            <p class="text">I wanted the project to open with an animation sequence. However, this was later dropped due to problems with the scope of it. Below are the individual storyboards to look through, as well as a gif featuring a more refined version of those storyboards.</p>
+            <div class="strip-wrap" data-gallery="Storyboards">
+              <div class="strip">
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/1.png" alt="Opening sequence storyboard, panel 1 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/2.png" alt="Opening sequence storyboard, panel 2 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/3.png" alt="Opening sequence storyboard, panel 3 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/4.png" alt="Opening sequence storyboard, panel 4 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/5.png" alt="Opening sequence storyboard, panel 5 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/6.png" alt="Opening sequence storyboard, panel 6 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/7.png" alt="Opening sequence storyboard, panel 7 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/8.png" alt="Opening sequence storyboard, panel 8 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/9.png" alt="Opening sequence storyboard, panel 9 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/10.png" alt="Opening sequence storyboard, panel 10 of 11"></button>
+                <button type="button"><img loading="lazy" src="images/conceptart/roughStoryboards/11.png" alt="Opening sequence storyboard, panel 11 of 11"></button>
+              </div>
+            </div>
+            <figure class="figure">
+              <img src="images/conceptart/roughStoryboards/storyboard1.gif" alt="Animated, more refined version of the opening sequence storyboards" loading="lazy">
+              <figcaption>Refined animatic of the opening sequence</figcaption>
+            </figure>
+          </li>
+          <li class="phase">
+            <span class="step">Phase 4</span>
+            <h3>User playtesting</h3>
+            <p class="text">Playtesting occurred during class workshops, with classmates playing our VR demo. The feedback we gathered from this directly informed major design choices we later made (see <a class="link" href="#decision-2">Decision point II</a>).</p>
+          </li>
+          <li class="phase">
+            <span class="step">Phase 5</span>
+            <h3>Final iteration and outcome</h3>
+            <p class="text">The final capstone build of Anemoia is a completed foundation for what will be continued. The base of what we strove to create is present. The game moves between scenes, starting in the bedroom scene; the objects are playable scenes the player goes into to explore and complete a task. The main things remaining absent are the sound design as well as the narrative scripting and voice acting. I believe these being added will help provide more of an emotional weight to the game, but where it is at the moment is a good stopping point for the foundation of it.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ===================== DECISIONS ===================== -->
+      <section class="pj-section" id="decisions">
+        <h2>Major project decision points</h2>
+
+        <div class="decision" id="decision-1">
+          <h3><small>Decision point I</small>From The Heart to Anemoia</h3>
+          <blockquote class="pitch">
+            <cite>Original project design</cite>
+            <p>“<em>The Heart</em> is a virtual reality (VR) horror game developed for the Meta Quest using Unity that looks at how interactive/immersive horror can convey the narrative of a queer student returning home from college for break. The game will make use of environmental storytelling to examine the connections between memory, family trauma, and queer life experience. The player will examine objects in their childhood bedroom, in turn triggering flashback narrative sequences that gradually reveal the protagonist’s experiences with queerness and family. The horror elements emerge from the protagonist’s fear of the unknown, having to confront change, and navigating the uncertainty of the future.”</p>
+          </blockquote>
+          <h4>The pivot</h4>
+          <p class="text">The original idea for our project leaned heavily into the horror element, and there were some interesting ideas to explore with this. Queer horror as a genre is an interesting way to tell stories of a similar manner; the use of dread used to externalize experiences of alienation, bodily estrangement, and family trauma.</p>
+          <p class="text">As we progressed, however, things changed. As we did our “Scope and Field” assignment in this capstone course, I found myself having to force horror concepts into the project's narrative, reaching through sources that did not match what the project was truly wanting to do. That was a signal for me that something needed to change. To me, this meant the game was not meant to be a horror game.</p>
+          <p class="text">Dropping the horror genre opened up what we could do with the project considerably. It made space for us to focus on interactive minigame mechanics, and left some room for a more lighthearted tone at times. We also were able to have exploration without worrying about creating a tone of dread for the player. I believe it became more honest to what the project was meant to be.</p>
+          <p class="text">Queer horror remains a concept I would like to explore in a future project, but for Anemoia, it was a good thing to rethink our original choice of genre.</p>
+          <div class="strip-wrap" data-gallery="Development in Unity">
+            <div class="strip">
+              <button type="button"><img loading="lazy" src="images/Unity/1.png" alt="Unity development screenshot 1"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/bdsc.png" alt="Unity development screenshot 2"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/early1.png" alt="Early Unity build, screenshot 1"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/early2.png" alt="Early Unity build, screenshot 2"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/early3.png" alt="Early Unity build, screenshot 3"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/Screenshot%202026-04-26%20230519.png" alt="Unity development screenshot, April 26"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/Screenshot%202026-04-27%20173716.png" alt="Unity development screenshot, April 27"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/Screenshot%202026-04-27%20174957.png" alt="Unity development screenshot, April 27"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/Screenshot%202026-04-28%20003336.png" alt="Unity development screenshot, April 28"></button>
+              <button type="button"><img loading="lazy" src="images/Unity/Screenshot%202026-04-28%20010049.png" alt="Unity development screenshot, April 28"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="decision" id="decision-2">
+          <h3><small>Decision point II</small>From walking simulator to minigames</h3>
+          <p class="text" style="margin-top:20px">The earliest version for Anemoia was closer to a walking simulator, a VR experience where the player moves through their bedroom, examines objects, and relies on environmental storytelling to get a message across to the player.</p>
+          <p class="text">User playtesting feedback worked to alter this angle. When classmates played the demo during a class workshop day, what received the most positive feedback was a scene where you swing around a sword. Physical interaction and interactivity, interacting with the space with your hands, were well-received elements of the game. The core appeal of VR for many people is this sort of experience, so it made sense. This left some prior walking simulator ideas off the table, however.</p>
+          <p class="text">The pivot towards minigames worked to tell a story while still meeting the player with what they enjoyed from the demo. We have two scenes, currently.</p>
+          <div class="scenes">
+            <div class="scene">
+              <h4>The sword in the stone</h4>
+              <p>The first scene is King Arthur-inspired: the player pulls a sword out of a stone, fights off a wave of enemies, defeats the boss, and ends with the player returning back to the bedroom scene (the starting point of the game).</p>
+              <p>This scene is meant to represent the main character's love of an old childhood book, the King Arthur story. This connects with a message of gender dysphoria, as the main character only ever got to feel masculine through projecting himself as a hero who pulled out the sword when no one else could. Going into this scene and taking the sword, fighting against knights and winning.</p>
+            </div>
+            <div class="scene">
+              <h4>The photograph</h4>
+              <p>The second scene is a photograph sequence, where the player explores through a room collecting fragmented pieces of a photograph, putting them back together in order to leave the scene.</p>
+              <p>This is meant to be a photograph taken during a childhood birthday party, a particularly rough memory for them, one that reveals more about their negative relationship with their family.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== REFLECTION ===================== -->
+      <section class="pj-section" id="reflection">
+        <h2>Reflection</h2>
+        <p class="pj-quote">“Working on Anemoia helped me to learn what sort of structure helps me to work better as both a designer and leader.”</p>
+        <p class="text" style="margin-top:36px">The skills I have learned throughout my time in the DNID (Digital Narrative and Interactive Design) program along the way have aided my ability to be successful in the creation of this project.</p>
+        <p class="text">During my time in the program, one of the most influential courses I took was a virtual reality class. Here, I developed a final project looking into immersion and the ways it could be implemented without the use of VR. I used an Xbox 360 Kinect and attempted to set up body tracking with Unity. While this was a much harder, more complicated project, I believe it helped me to have some level of familiarity with Unity for the purposes of Anemoia.</p>
+        <p class="text">This semester specifically aided me in bettering my less technical skills, such as project management. Working on Anemoia helped me to learn what sort of structure helps me to work better as both a designer and leader: ways to pace work, communication, and making decisions for (and as) a group. I had not taken on a project management role previous to this project, so this helped me greatly in learning what I do well and what I could improve on in future project management roles.</p>
+        <figure class="figure narrow">
+          <img src="images/conceptart/finished/deliverables.png" alt="A character dressed as a mail carrier in a short-sleeved button-up shirt and cap, with a cross-body bag full of mail" loading="lazy">
+        </figure>
+        <h3 style="margin-top:48px;font-size:22px;font-weight:500;letter-spacing:-.02em">Capstone values</h3>
+        <p class="text" style="margin-top:10px">We were guided by the class values of experimentation, openness for collaboration, communication, empathy, adaptability, and accessibility.</p>
+        <ul class="values" aria-label="Capstone values; the two most relevant to Anemoia are highlighted">
+          <li class="on">Experimentation</li><li>Openness for collaboration</li><li>Communication</li>
+          <li>Empathy</li><li class="on">Adaptability</li><li>Accessibility</li>
+        </ul>
+        <p class="text" style="margin-top:28px">Of the capstone values, adaptability and experimentation feel the most relevant to our experience creating Anemoia as a group.</p>
+        <p class="text"><strong style="font-weight:500">Adaptability:</strong> We had a developed concept early on and had to walk away from it due to needing to change the game's genre and really figure out what we were going for.</p>
+        <p class="text"><strong style="font-weight:500">Experimentation:</strong> When things were planned out but did not work properly, experimentation helped to get those things done but through a different method than usual. Anemoia as a product exists due to problem-solving such as this.</p>
+      </section>
+
+      <!-- ===================== WORKS CITED ===================== -->
+      <section class="pj-section" id="works-cited">
+        <h2>Works cited</h2>
+        <ol class="cited">
+          <li>Banks, Beck. “A Visible Absence: Transmasculine People on the Screen.” <em>Participations: Journal of Audience &amp; Reception Studies</em>, 2021.</li>
+          <li>Barreda-Ángeles, Miguel, et al. “Virtual Reality Storytelling as a Double-Edged Sword: Immersive Presentation of Nonfiction 360°-Video Is Associated with Impaired Cognitive Information Processing.” <em>Communication Monographs</em>, vol. 88, no. 2, 20 Aug. 2020, pp. 154–173, <a href="https://doi.org/10.1080/03637751.2020.1803496" target="_blank" rel="noopener noreferrer">https://doi.org/10.1080/03637751.2020.1803496</a>.</li>
+          <li>“2024 GLAAD Gaming Report: The State of LGBTQ Inclusion in Video Games.” <em>GLAAD</em>, 26 Feb. 2025, glaad.org/glaad-gaming/2024.</li>
+          <li>Graja, Sarra, et al. “Impact of Visual and Sound Orchestration on Physiological Arousal and Tension in a Horror Game.” <em>IEEE Transactions on Games</em>, vol. 13, no. 3, Sept. 2021, ieeexplore-ieee-org.pitt.idm.oclc.org/document/9130167.</li>
+          <li>Kagen, Melissa. <em>Wandering Games</em>. The MIT Press, 2022, <a href="https://doi.org/10.7551/mitpress/13856.001.0001" target="_blank" rel="noopener noreferrer">https://doi.org/10.7551/mitpress/13856.001.0001</a>.</li>
+          <li>Lavoie, Raymond, et al. “Virtual Experience, Real Consequences: The Potential Negative Emotional Consequences of Virtual Reality Gameplay.” <em>Virtual Reality</em>, vol. 25, no. 1, 2 Apr. 2020, pp. 69–81, <a href="https://doi.org/10.1007/s10055-020-00440-y" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s10055-020-00440-y</a>.</li>
+          <li>Paavolainen, Jasa. “Storytelling Methods in Non-Linear Video Games.” <em>Tampere University of Applied Sciences</em>, 2024.</li>
+          <li>Szolin, Kim, et al. “‘I Am the Character, the Character Is Me’: A Thematic Analysis of the User-Avatar Relationship in Videogames.” <em>Computers in Human Behavior</em>, vol. 143, June 2023, p. 107694, <a href="https://doi.org/10.1016/j.chb.2023.107694" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.chb.2023.107694</a>.</li>
+          <li>Thach, Hibby. “A Cross-Game Look at Transgender Representation in Video Games.” <em>Press Start</em>, 2021, <a href="https://press-start.gla.ac.uk/index.php/press-start/article/view/187" target="_blank" rel="noopener noreferrer">https://press-start.gla.ac.uk/index.php/press-start/article/view/187</a>.</li>
+          <li>The Dictionary of Obscure Sorrows. “Anemoia.” <em>The Dictionary of Obscure Sorrows</em>, www.thedictionaryofobscuresorrows.com/concept/anemoia.</li>
+          <li>Unity. <em>VR and MR Development in Unity</em>. Unity Manual, docs.unity3d.com/6000.3/Documentation/Manual/VROverview.html.</li>
+        </ol>
+        <figure class="figure narrow" style="max-width:280px">
+          <img src="images/conceptart/finished/flag.png" alt="Drawing of a transgender pride flag in blue, pink, and white" loading="lazy">
+          <figcaption>Transgender pride flag</figcaption>
+        </figure>
+      </section>
+    </article>
+  </div>
+
+  <nav class="pj-nav" aria-label="More projects">
+    <a class="next" href="#" data-next><small>Next project</small><strong><span class="next-title"></span><span class="msr" aria-hidden="true">arrow_forward</span></strong></a>
+    <a class="prev link" href="#" data-prev></a>
+  </nav>
+</main>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-band">
+      <h2>Get in touch</h2>
+      <p>I'm open to new projects, collaborations, and roles in games and interactive media. Reach out anytime.</p>
+      <a class="mail link" href="mailto:newshameli@gmail.com">newshameli@gmail.com</a>
+      <div class="actions">
+        <a class="btn line" href="https://github.com/enewsham" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn line" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a><!-- add your LinkedIn link -->
+        <a class="btn line" href="../resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>DNID English Capstone, 2026</span><span><a class="link" href="https://github.com/CaleMoore28/TheHeart" target="_blank" rel="noopener noreferrer">GitHub repo</a>, <a class="link" href="https://sidequestvr.com/app/55470" target="_blank" rel="noopener noreferrer">SideQuest</a></span></div></footer>
+
+<dialog class="lightbox" aria-label="Image viewer">
+  <img alt="">
+  <div class="lb-bar">
+    <p></p>
+    <button class="icon-btn" type="button" data-step="-1" aria-label="Previous image"><span class="msr" aria-hidden="true">arrow_back</span></button>
+    <button class="icon-btn" type="button" data-step="1" aria-label="Next image"><span class="msr" aria-hidden="true">arrow_forward</span></button>
+    <button class="icon-btn" type="button" data-close aria-label="Close"><span class="msr" aria-hidden="true">close</span></button>
+  </div>
+</dialog>
+
+<script>window.ROOT = "../";</script>
+<script src="../projects.js"></script>
+<script src="../site.js"></script>
+<script>
+/* ===== Next / previous project ===== */
+(function () {
+  const i = PROJECTS.findIndex(p => p.id === "anemoia"), n = PROJECTS.length;
+  const next = PROJECTS[(i + 1) % n], prev = PROJECTS[(i - 1 + n) % n];
+  const a = document.querySelector("[data-next]"), b = document.querySelector("[data-prev]");
+  a.setAttribute("href", projectUrl(next)); a.querySelector(".next-title").textContent = next.title;
+  b.setAttribute("href", projectUrl(prev)); b.textContent = "Previous: " + prev.title;
+})();
+
+/* ===== Image strips: arrow buttons, counter, and a lightbox per strip ===== */
+const lb = document.querySelector(".lightbox"), lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
+let group = [], at = 0;
+function show(k) {
+  at = (k + group.length) % group.length;
+  lbImg.src = group[at].src; lbImg.alt = group[at].alt;
+  lbCap.textContent = group.length > 1 ? `${group[at].alt} (${at + 1} of ${group.length})` : group[at].alt;
+  lb.querySelectorAll("[data-step]").forEach(b => b.hidden = group.length < 2);
+}
+document.querySelectorAll("[data-gallery]").forEach(wrap => {
+  const strip = wrap.querySelector(".strip"), imgs = [...strip.querySelectorAll("img")];
+  const controls = document.createElement("div");
+  controls.className = "strip-controls";
+  controls.innerHTML = `<span class="count">${wrap.dataset.gallery}, ${imgs.length} images</span>
+    <button class="icon-btn" type="button" data-dir="-1" aria-label="Scroll ${wrap.dataset.gallery} back"><span class="msr" aria-hidden="true">arrow_back</span></button>
+    <button class="icon-btn" type="button" data-dir="1" aria-label="Scroll ${wrap.dataset.gallery} forward"><span class="msr" aria-hidden="true">arrow_forward</span></button>`;
+  wrap.append(controls);
+  const [back, fwd] = controls.querySelectorAll("button");
+  const sync = () => { back.disabled = strip.scrollLeft < 4; fwd.disabled = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4; };
+  controls.addEventListener("click", e => { const b = e.target.closest("[data-dir]"); if (b) strip.scrollBy({ left: strip.clientWidth * .8 * b.dataset.dir }); });
+  strip.addEventListener("scroll", sync, { passive: true });
+  addEventListener("resize", sync);
+  imgs.forEach(img => img.addEventListener("load", sync));
+  sync();
+  strip.querySelectorAll("button").forEach((btn, k) => {
+    btn.setAttribute("aria-label", "Enlarge: " + imgs[k].alt);
+    btn.addEventListener("click", () => { group = imgs.map(im => ({ src: im.src, alt: im.alt })); show(k); lb.showModal(); });
+  });
+});
+/* Single figures open in the lightbox too */
+document.querySelectorAll(".figure img").forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.addEventListener("click", () => { group = [{ src: img.src, alt: img.alt }]; show(0); lb.showModal(); });
+});
+lb.addEventListener("click", e => {
+  if (e.target === lb || e.target.closest("[data-close]")) lb.close();
+  const s = e.target.closest("[data-step]"); if (s) show(at + Number(s.dataset.step));
+});
+lb.addEventListener("keydown", e => { if (e.key === "ArrowRight") show(at + 1); if (e.key === "ArrowLeft") show(at - 1); });
+lb.addEventListener("close", () => lbImg.removeAttribute("src"));
+
+/* ===== "On this page" follows your scroll ===== */
+const tocLinks = [...document.querySelectorAll(".toc a")];
+const spy = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) tocLinks.forEach(a => a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + e.target.id)));
+}), { rootMargin: "-35% 0px -60% 0px" });
+document.querySelectorAll(".pj-section").forEach(s => spy.observe(s));
+
+initChrome();
+</script>
+</body>
+</html>

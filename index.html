@@ -1,237 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eli Newsham — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-
-    <!-- ── Nav ── -->
-    <nav>
-      <a class="nav-logo" href="#hero">Eli Newsham</a>
-      <ul class="nav-links">
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- ── Hero ── -->
-    <section id="hero">
-      <div class="container">
-        <p class="hero-eyebrow">Portfolio — 2026</p>
-        <h1 class="hero-name">Eli<br>Newsham<em>.</em></h1>
-        <p class="hero-title-line">
-          <!-- REPLACE: your actual titles/roles -->
-          Narrative Designer &nbsp;·&nbsp; VR Developer &nbsp;·&nbsp; Artist
-        </p>
-        <p class="hero-bio">
-          <!-- REPLACE: a 2–3 sentence bio in your own voice -->
-          Placeholder Bio Text
-        </p>
-        <a class="hero-cta" href="#projects">View my work</a>
-      </div>
-    </section>
-
-    <!-- ── Projects ── -->
-    <section id="projects">
-      <div class="container">
-        <p class="section-label">Selected Work</p>
-        <h2 style="margin-bottom: 2.5rem;">Projects</h2>
-
-        <div class="projects-grid">
-
-          <!-- PROJECT 1 — Anemoia -->
-          <a class="project-card" href="https://enewsham.github.io/anemoia-design/">
-            <div class="project-thumb">
-              <!-- REPLACE: swap with <img src="images/anemoia-thumb.jpg" ... /> -->
-              Anemoia
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">VR</span>
-                <span class="project-tag">Narrative Design</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">Team Project</span>
-                <span class="project-tag">2026</span>
-              </div>
-              <p class="project-name">Anemoia</p>
-              <p class="project-desc">
-                Created for my Spring 2026 DNID English Capstone course. A VR narrative experience exploring memory, family, survival, and gender dysphoria
-                through the lens of nostalgia for a time never truly lived. 
-              </p>
-              <span class="project-card-link">View design narrative →</span>
-            </div>
-          </a>
-
-          <!-- PROJECT 2 — Paperworkx -->
-           <a class="project-card" href="https://sonicdrives.itch.io/paperworks" target="_blank">
-  <div class="project-thumb">Paperworkx</div>
-  <div class="project-info">
-    <div class="project-tags">
-      <span class="project-tag">2D</span>
-      <span class="project-tag">Unity</span>
-      <span class="project-tag">Team Project</span>
-      <span class="project-tag">2025</span>
-    </div>
-    <p class="project-name">Paperworkx</p>
-    <p class="project-desc">...your existing description...</p>
-    <p class="project-role"><strong>My role:</strong> ...what you did...</p>
-    <span class="project-card-link">View project →</span>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eli Newsham | Portfolio</title>
+<meta name="description" content="Eli Newsham: designer, developer, and artist working in games, VR, and interactive media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..24,300,0,0&display=block">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Eli Newsham</a>
+    <nav aria-label="Primary"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <a class="btn solid small" href="mailto:newshameli@gmail.com">Get in touch</a>
   </div>
-</a>
+</header>
 
-          <!-- PROJECT 3 — SPRUCE -->
-           <a class="project-card" href="https://sonicdrives.itch.io/Spruce/">
-          <div class="project-card">
-            <div class="project-thumb">Spruce</div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">Physical Design</span>
-                <span class="project-tag">Presentation</span>
-                <span class="project-tag">Figma</span>
-                <span class="project-tag">Team Project</span>
-                <span class="project-tag">2026</span>
-              </div>
-              <p class="project-name">Spruce</p>
-              <p class="project-desc">
-                Created for the Spring 2026 Design Jam at the University of Pittsburgh. Using the given theme of "playgrounds", my team created a hypothetical series of playground modules that connect to provide park amenities. There is a mobile application included as well, allowing for families to meet people in their local communities and view information about nearby playgrounds. 
-              </p>
-              <span class="project-card-link">View project →</span>
-            </div>
-          </div>
-          </a>
-
-           <!-- PROJECT 3 — ARDUINO PROJECT -->
-          <div class="project-card">
-            <div class="project-thumb">Arduino</div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">Arduino</span>
-                <span class="project-tag">ARG</span>
-                <span class="project-tag">Arduino IDE</span>
-                <span class="project-tag">Team Project</span>
-                <span class="project-tag">2025</span>
-              </div>
-              <p class="project-name">Arduino Anomaly Detector</p>
-              <p class="project-desc">
-                Created as a final project for DNID. Using an Arduino controller, we assembled a device with a GPS module to construct a physically interactive ARG narrative experience. Programmed using the Arduino IDE software application. 
-              </p>
-              <span class="project-card-link">View project →</span>
-            </div>
-          </div>
-
-           <!-- PROJECT 3 — StrongTogether3D -->
-          <div class="project-card">
-            <div class="project-thumb">StrongTogether3D</div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">Replace</span>
-                <span class="project-tag">With Tags</span>
-                <span class="project-tag">With Tags</span>
-                <span class="project-tag">With Tags</span>
-                <span class="project-tag">With Tags</span>
-              </div>
-              <p class="project-name">SCI Capstone</p>
-              <p class="project-desc">
-                Placeholder Text.
-              </p>
-              <span class="project-card-link">View project →</span>
-            </div>
-          </div>
-
-
-           <!-- PROJECT 3 — MACHINA : GENESIS -->
-          <div class="project-card">
-            <div class="project-thumb">GENESIS</div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">3D</span>
-                <span class="project-tag">Immersive Sim</span>
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">Personal Project</span>
-                <span class="project-tag">Ongoing</span>
-              </div>
-              <p class="project-name">MACHINA : GENESIS</p>
-              <p class="project-desc">
-                3D Immersive Simulation game heavily inspired by the original Deus Ex, with a wasteland world inspired by Fallout. Themes of self-discovery, finding your place in the world, the ethics of artificial intelligence, societal issues of the digital age, recovery, and making peace with the past.
-              </p>
-              <span class="project-card-link">View project →</span>
-            </div>
-          </div>
-
-
-          <!-- Duplicate a .project-card block above to add more projects -->
-
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <p class="hero-role">Designer, developer, and artist</p>
+        <figure class="portrait">
+          <svg viewBox="0 0 100 100" role="img" aria-label="Portrait of Eli Newsham">
+            <defs><clipPath id="portrait-clip"><path id="portrait-shape"/></clipPath></defs>
+            <g clip-path="url(#portrait-clip)">
+              <rect class="face" x="0" y="0" width="100" height="100"/>
+              <!-- Add your photo: <image href="img/me.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid slice"/> and delete the text below -->
+              <text x="50" y="54" text-anchor="middle">Your photo</text>
+            </g>
+          </svg>
+        </figure>
+      </div>
+      <h1 class="wordmark" aria-label="Eli Newsham"><span class="w" aria-hidden="true"><span>Eli</span></span> <span class="w" aria-hidden="true"><span>Newsham</span></span></h1>
+      <div class="hero-bottom">
+        <p class="hero-bio">Placeholder Bio</p>
+        <div class="actions">
+          <a class="btn solid" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a><!-- put resume.pdf in the site root -->
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ── About ── -->
-    <section id="about">
-      <div class="container">
-        <p class="section-label">About</p>
-        <h2 style="margin-bottom: 2.5rem;">Who I am</h2>
+  <section id="work">
+    <div class="wrap">
+      <div class="work-head">
+        <h2>Selected work<sup class="total"></sup></h2>
+        <div class="chips" role="group" aria-label="Filter projects"></div>
+      </div>
+      <div class="grid"></div>
+      <div class="empty" hidden><p>No projects in this category yet.</p><button class="btn line" type="button" data-clear>Show all work</button></div>
+    </div>
+  </section>
 
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              <!-- REPLACE: longer bio, 2–4 paragraphs -->
-             Placeholder
-            </p>
-            <p>
-              Placeholder
-            </p>
-          </div>
-
-          <div>
-            <p class="section-label" style="margin-bottom: 1.5rem;">Skills &amp; Tools</p>
-            <ul class="skills-list">
-              <!-- REPLACE: add/remove/edit these to match your actual skills -->
-              <li>Unity / VR Development <span class="skill-area">Development</span></li>
-              <li>Narrative Design <span class="skill-area">Design</span></li>
-              <li>HTML / CSS / JavaScript <span class="skill-area">Development</span></li>
-              <li>Adobe Creative Suite <span class="skill-area">Design</span></li>
-              <li>Java <span class="skill-area">Development</span></li>
-            </ul>
-          </div>
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <div class="body">
+        <p class="lede">[Who you are, in two or three sentences.]</p>
+        <p>[What draws you to interactive storytelling]</p>
+        <dl>
+          <div><dt>Education</dt><dd>University of Pittsburgh, Digital Narrative and Interactive Design, 2026</dd></div>
+          <div><dt>Design</dt><dd>Narrative, Environmental, Accessible, Inclusive & user-centered design</dd></div>
+          <div><dt>Development</dt><dd>Unity, VR (Meta Quest 2), C#, Java, HTML, CSS, JavaScript</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="contact-band">
+        <h2>Get in touch</h2>
+        <p>I'm open to new projects, collaborations, and roles in games and interactive media. Reach out anytime.</p>
+        <a class="mail link" href="mailto:newshameli@gmail.com">newshameli@gmail.com</a>
+        <div class="actions">
+          <a class="btn line" href="https://github.com/enewsham" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn line" href="#" target="_blank" rel="noopener noreferrer">itch.io</a><!-- add your itch.io profile link -->
+          <a class="btn line" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a><!-- add your LinkedIn link -->
+          <a class="btn line" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Eli Newsham, 2026</span><span>Digital Narrative and Interactive Design, University of Pittsburgh</span></div></footer>
 
-    <!-- ── Contact ── -->
-    <section id="contact">
-      <div class="container">
-        <p class="section-label">Contact</p>
-        <h2 style="margin-bottom: 1.5rem;">Get in touch</h2>
+<script src="projects.js"></script>
+<script src="site.js"></script>
+<script>
+/* ===== Wordmark: scale the name to fill the page width ===== */
+const wordmark = document.querySelector(".wordmark");
+function fitWordmark() {
+  const box = wordmark.parentElement, pad = parseFloat(getComputedStyle(box).paddingLeft) * 2;
+  wordmark.style.fontSize = "100px";
+  wordmark.style.fontSize = Math.min(300, 100 * (box.clientWidth - pad) / wordmark.scrollWidth) + "px";
+}
+fitWordmark();
+document.fonts && document.fonts.ready.then(fitWordmark);
+addEventListener("resize", fitWordmark);
 
-        <p class="contact-intro">
-          <!-- REPLACE: a short, personal line about what you're open to -->
-          Placeholder
-        </p>
+/* ===== Portrait: one morph on load ===== */
+(function () {
+  const el = document.getElementById("portrait-shape");
+  const draw = k => el.setAttribute("d", shapePath(12, .055 * k, 46, k * .5));
+  if (reduced) return draw(1);
+  const s = performance.now(), ease = t => 1 - Math.pow(1 - t, 4);
+  (function f(now) { const t = Math.min(1, (now - s) / 1400); draw(ease(t)); if (t < 1) requestAnimationFrame(f); })(s);
+})();
 
-        <div class="contact-links">
-          <!-- REPLACE: swap # with your actual links -->
-          <a class="contact-link" href="mailto:your@email.com">Email</a>
-          <a class="contact-link" href="https://github.com/enewsham" target="_blank">GitHub</a>
-          <a class="contact-link" href="#" target="_blank">LinkedIn</a>
-          <!-- Add more as needed: itch.io, Instagram, etc. -->
-        </div>
-      </div>
-    </section>
+/* ===== Project grid: each tile links to project.html?id=... ===== */
+const grid = document.querySelector(".grid");
+grid.innerHTML = PROJECTS.map(p => `
+  <a class="proj tile" href="${projectUrl(p)}" data-id="${p.id}" style="view-transition-name: tile-${p.id}">
+    <div class="tile-media">${cover(p)}<span class="open" aria-hidden="true"><span class="msr">arrow_outward</span></span></div>
+    <div class="tile-row"><h3>${p.title}</h3><span class="year">${p.year}</span></div>
+    <p>${p.summary}</p>
+    <ul class="tags">${li(p.tags)}</ul>
+  </a>`).join("");
+document.querySelector(".total").textContent = PROJECTS.length;
 
-    <!-- ── Footer ── -->
-    <footer>
-      <div class="container">
-        <p>Eli Newsham &nbsp;·&nbsp; DNID, University of Pittsburgh &nbsp;·&nbsp; 2026</p>
-      </div>
-    </footer>
+/* ===== Tag filter ===== */
+let active = "All";
+const chips = document.querySelector(".chips");
+chips.innerHTML = FILTERS.map(f => {
+  const n = f === "All" ? PROJECTS.length : PROJECTS.filter(p => p.cats.includes(f)).length;
+  return `<button class="chip" type="button" data-f="${f}" aria-pressed="${f === "All"}">${f}<span class="n">${n}</span></button>`;
+}).join("");
+function applyFilter() {
+  vt(() => {
+    chips.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.f === active)));
+    let shown = 0;
+    grid.querySelectorAll(".proj").forEach(el => {
+      const on = active === "All" || byId(el.dataset.id).cats.includes(active);
+      el.hidden = !on; shown += on;
+    });
+    document.querySelector(".empty").hidden = shown > 0;
+  });
+}
+chips.addEventListener("click", e => { const b = e.target.closest(".chip"); if (b) { active = b.dataset.f; applyFilter(); } });
+document.querySelector("[data-clear]").addEventListener("click", () => { active = "All"; applyFilter(); });
 
-  </body>
+initChrome();
+</script>
+</body>
 </html>

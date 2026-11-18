@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project | Eli Newsham</title>
+<meta name="description" content="Project case study by Eli Newsham.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..24,300,0,0&display=block">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Eli Newsham</a>
+    <nav aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="#contact">Contact</a></nav>
+    <a class="btn solid small" href="mailto:newshameli@gmail.com">Get in touch</a>
+  </div>
+</header>
+
+<main id="project" class="wrap pj"></main>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-band">
+      <h2>Get in touch</h2>
+      <p>I'm open to new projects, collaborations, and roles in games and interactive media. Reach out anytime.</p>
+      <a class="mail link" href="mailto:newshameli@gmail.com">newshameli@gmail.com</a>
+      <div class="actions">
+        <a class="btn line" href="https://github.com/enewsham" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn line" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a><!-- add your LinkedIn link -->
+        <a class="btn line" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>Eli Newsham, 2026</span><span>Digital Narrative and Interactive Design, University of Pittsburgh</span></div></footer>
+
+<dialog class="lightbox" aria-label="Image viewer">
+  <img alt="">
+  <div class="lb-bar">
+    <p></p>
+    <button class="icon-btn" type="button" data-step="-1" aria-label="Previous image"><span class="msr" aria-hidden="true">arrow_back</span></button>
+    <button class="icon-btn" type="button" data-step="1" aria-label="Next image"><span class="msr" aria-hidden="true">arrow_forward</span></button>
+    <button class="icon-btn" type="button" data-close aria-label="Close"><span class="msr" aria-hidden="true">close</span></button>
+  </div>
+</dialog>
+
+<script src="projects.js"></script>
+<script src="site.js"></script>
+<script>
+const mount = document.getElementById("project");
+const p = byId(params.get("id"));
+if (p && p.page) location.replace(projectUrl(p) + location.search.replace(/[?&]id=[^&]*/, "").replace(/^&/, "?"));
+
+if (!p) {
+  mount.innerHTML = `
+    <div class="not-found">
+      <h1>Project not found</h1>
+      <p>This link doesn't match any project. It may have been renamed.</p>
+      <a class="btn solid" href="index.html#work">See all work</a>
+    </div>`;
+  document.title = "Project not found | Eli Newsham";
+} else {
+  const i = PROJECTS.indexOf(p), n = PROJECTS.length;
+  const prev = PROJECTS[(i - 1 + n) % n], next = PROJECTS[(i + 1) % n];
+  const shots = (p.gallery || []).map(g => typeof g === "string" ? { src: g, caption: "" } : g);
+
+  const gallery = shots.length
+    ? shots.map((g, k) => `<figure><button type="button" data-shot="${k}" aria-label="Enlarge image${g.caption ? ": " + g.caption : ""}">${cover(p, "", g.src)}</button>${g.caption ? `<figcaption>${g.caption}</figcaption>` : ""}</figure>`).join("")
+    : [0, 1, 2].map(() => `<figure>${cover(p, "", null, "Add a process image")}</figure>`).join("");
+
+  /* Each section appears only if it has content */
+  const sections = [
+    ["overview", "Overview", p.overview && `<p class="text">${p.overview}</p>`],
+    ["challenge", "The challenge", p.challenge && `<p class="text">${p.challenge}</p>`],
+    ["role", "My role", (p.role || p.highlights?.length) && `${p.role ? `<p class="text">${p.role}</p>` : ""}${p.highlights?.length ? `<ul class="pj-list">${li(p.highlights)}</ul>` : ""}`],
+    ["process", "Process", `${p.process ? `<p class="text">${p.process}</p>` : ""}<div class="pj-gallery">${gallery}</div>`],
+    ["video", "Video", p.video
+      ? `<div class="pj-video"><iframe src="${p.video}" title="${p.title} video" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`
+      : `<div class="pj-video empty-slot"><span class="msr" aria-hidden="true">play_circle</span>Add a gameplay or walkthrough video by setting <code>video</code> to a YouTube or Vimeo embed link.</div>`],
+    ["outcome", "Outcome", p.outcome && `<p class="text">${p.outcome}</p>`],
+    ["reflection", "Reflection", p.reflection && `<p class="pj-quote">${p.reflection}</p>`],
+    ["credits", "Credits", `<dl class="pj-credits">${(p.team || []).map(([who, what]) => `<div><dt>${what}</dt><dd>${who}</dd></div>`).join("")}<div><dt>Tools</dt><dd>${p.tools.join(", ")}</dd></div></dl>`],
+    ["links", "Links", p.links?.length && `<div class="pj-links">${p.links.map((l, k) =>
+      `<a class="btn ${k ? "line" : "solid"}" href="${l.href}" target="_blank" rel="noopener noreferrer">${l.label}<span class="msr" aria-hidden="true">arrow_outward</span></a>`).join("")}</div>`]
+  ].filter(s => s[2]);
+
+  mount.innerHTML = `
+    <a class="back" href="index.html#work"><span class="msr" aria-hidden="true">arrow_back</span>All work</a>
+    <header class="pj-head">
+      <h1>${p.title}</h1>
+      <p class="summary">${p.summary}</p>
+      <ul class="tags">${li(p.tags)}</ul>
+      ${p.links?.length ? `<div class="pj-links" style="margin-top:32px">${p.links.map((l, k) =>
+        `<a class="btn ${k ? "line" : "solid"}" href="${l.href}" target="_blank" rel="noopener noreferrer">${l.label}<span class="msr" aria-hidden="true">arrow_outward</span></a>`).join("")}</div>` : ""}
+    </header>
+    <dl class="pj-meta">
+      <div><dt>Role</dt><dd>${p.roleShort || "[Your role]"}</dd></div>
+      <div><dt>Year</dt><dd>${p.year}</dd></div>
+      <div><dt>Duration</dt><dd>${p.duration || "[Length]"}</dd></div>
+      <div><dt>Type</dt><dd>${p.kind}</dd></div>
+      <div><dt>Context</dt><dd>${p.context}</dd></div>
+      <div><dt>Tools</dt><dd>${p.tools.join(", ")}</dd></div>
+    </dl>
+    ${cover(p, "pj-hero")}
+    <div class="pj-layout">
+      <nav class="toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>${sections.map(([id, label]) => `<li><a href="#${id}">${label}</a></li>`).join("")}</ol>
+      </nav>
+      <article>
+        ${sections.map(([id, label, html]) => `<section class="pj-section" id="${id}"><h2>${label}</h2>${html}</section>`).join("")}
+      </article>
+    </div>
+    <nav class="pj-nav" aria-label="More projects">
+      <a class="next" href="${projectUrl(next)}"><small>Next project</small><strong>${next.title}<span class="msr" aria-hidden="true">arrow_forward</span></strong></a>
+      <a class="prev link" href="${projectUrl(prev)}">Previous: ${prev.title}</a>
+    </nav>`;
+
+  document.title = `${p.title} | Eli Newsham`;
+  document.querySelector('meta[name="description"]').setAttribute("content", p.summary);
+
+  /* ===== "On this page" highlights the section you're reading ===== */
+  const tocLinks = [...mount.querySelectorAll(".toc a")];
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      tocLinks.forEach(a => a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + e.target.id)));
+    });
+  }, { rootMargin: "-35% 0px -60% 0px" });
+  mount.querySelectorAll(".pj-section").forEach(s => spy.observe(s));
+
+  /* ===== Lightbox for process images ===== */
+  const lb = document.querySelector(".lightbox"), lbImg = lb.querySelector("img"), lbCap = lb.querySelector("p");
+  let at = 0;
+  const show = k => { at = (k + shots.length) % shots.length; lbImg.src = shots[at].src; lbImg.alt = shots[at].caption || ""; lbCap.textContent = shots[at].caption || ""; };
+  lb.querySelectorAll("[data-step]").forEach(b => b.hidden = shots.length < 2);
+  mount.addEventListener("click", e => { const b = e.target.closest("[data-shot]"); if (b) { show(+b.dataset.shot); lb.showModal(); } });
+  lb.addEventListener("click", e => {
+    if (e.target === lb || e.target.closest("[data-close]")) lb.close();
+    const s = e.target.closest("[data-step]"); if (s) show(at + Number(s.dataset.step));
+  });
+  lb.addEventListener("keydown", e => { if (e.key === "ArrowRight") show(at + 1); if (e.key === "ArrowLeft") show(at - 1); });
+}
+
+initChrome();
+</script>
+</body>
+</html>
